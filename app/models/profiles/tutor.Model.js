@@ -118,4 +118,6 @@ var TutorSchema = new mongoose.Schema({
 
 
 
-module.exports = mongoose.model("profile_tutor", TutorSchema);
+// module.exports = mongoose.model("profile_tutor", TutorSchema);
+module.exports.Schema = TutorSchema;
+module.exports.Model = mongoose.model("profile_tutor", TutorSchema);

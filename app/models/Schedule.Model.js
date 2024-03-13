@@ -8,4 +8,6 @@ var CustomrSchema = new Schema({
 
 }, { timestamps: true });
 
-module.exports = mongoose.model("Customr", CustomrSchema);
+
+module.exports.Schema = CustomrSchema;
+module.exports.Model = mongoose.model("Customr", CustomrSchema);

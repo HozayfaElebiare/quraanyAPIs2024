@@ -87,4 +87,6 @@ var quraanSchema = new mongoose.Schema({
 
 }, { timestamps: true })
 
-module.exports = mongoose.model('quran', quraanSchema)
+
+module.exports.Schema = quraanSchema;
+module.exports.Model = mongoose.model("quran", quraanSchema);

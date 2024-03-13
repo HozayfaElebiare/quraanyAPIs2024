@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var PublisherSchema = new mongoose.Schema({
+var CoordinatorSchema = new mongoose.Schema({
     userId: { type: mongoose.Types.ObjectId, ref: 'user' },
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
@@ -10,8 +10,10 @@ var PublisherSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // Virtual for user's full name
-PublisherSchema.virtual("fullName").get(function() {
+CoordinatorSchema.virtual("fullName").get(function() {
     return this.firstName + " " + this.lastName;
 });
 
-module.exports = mongoose.model("profile_publisher", PublisherSchema);
+// module.exports = mongoose.model("profile_coordinator", CoordinatorSchema);
+module.exports.Schema = CoordinatorSchema;
+module.exports.Model = mongoose.model("profile_coordinator", CoordinatorSchema);

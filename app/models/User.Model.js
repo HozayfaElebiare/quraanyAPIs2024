@@ -57,4 +57,6 @@ UserSchema.pre('findByIdAndUpdate', function() {
     this.populate('profile');
 })
 
-module.exports = mongoose.model("user", UserSchema);
+// module.exports = mongoose.model("user", UserSchema);
+module.exports.Schema = UserSchema;
+module.exports.Model = mongoose.model("user", UserSchema);

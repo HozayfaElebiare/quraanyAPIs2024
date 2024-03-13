@@ -55,4 +55,6 @@ StudentSchema.pre('findByIdAndUpdate', function() {
     this.populate('currentSubscription');
 })
 
-module.exports = mongoose.model("profile_student", StudentSchema);
+// module.exports = mongoose.model("profile_student", StudentSchema);
+module.exports.Schema = StudentSchema;
+module.exports.Model = mongoose.model("profile_student", StudentSchema);

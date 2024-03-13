@@ -33,4 +33,6 @@ var verseSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
-module.exports = mongoose.model('quranverse', verseSchema)
+// module.exports = mongoose.model('quranverse', verseSchema)
+module.exports.Schema = verseSchema;
+module.exports.Model = mongoose.model("quranverse", verseSchema);
